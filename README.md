@@ -1,12 +1,12 @@
-# kitty
-soho vibes for kitty
+<img src="https://github.com/rose-pine/rose-pine-theme/blob/master/assets/icon.png" width="64" />
+
+# Rosé Pine
+
+All natural pine, faux fur and a bit of soho vibes for the classy minimalist.
 
 [![](https://img.shields.io/badge/Rosé%20Pine%20Theme-191724)](https://github.com/rose-pine/rose-pine-theme)
 
-1. Move `rosepine.conf` to `.config/kitty/`
-2. Edit `.config/kitty/kitty.conf` and add the line 
-```conf
-include rosepine.conf
-```
+### Screenshots
 
-![preview](https://i.imgur.com/QbcSiNH.png)
+![screenshot](https://cdn.discordapp.com/attachments/608697372054126594/775846089504718879/unknown.png)
+

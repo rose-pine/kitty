@@ -8,5 +8,5 @@ All natural pine, faux fur and a bit of soho vibes for the classy minimalist.
 
 ### Screenshots
 
-![screenshot](https://cdn.discordapp.com/attachments/608697372054126594/775846089504718879/unknown.png)
+![screenshot](https://i.imgur.com/QbcSiNH.png)
 

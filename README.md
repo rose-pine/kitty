@@ -9,4 +9,6 @@ soho vibes for kitty
 include rosepine.conf
 ```
 
+https://github.com/thatonecalculator/nerdfetch
+
 ![preview](https://i.imgur.com/QbcSiNH.png)

@@ -21,3 +21,7 @@ include rosepine.conf
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)
 
 ![Kitty with Rosé Pine](https://i.imgur.com/QbcSiNH.png)
+
+## Thanks to 
+
+- [ThatOneCalculator](https://github.com/thatonecalculator)

@@ -19,7 +19,7 @@
 include rosepine.conf
 ```
 
-## Screenshots
+## Gallery
 
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)
 

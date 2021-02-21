@@ -13,7 +13,7 @@
 
 ## Usage
 
-1. Move `rosepine.conf` to `.config/kitty/`
+1. Move the desired colorscheme, for example `rosepine.conf`, to `.config/kitty/`
 2. Edit `.config/kitty/kitty.conf` and add the line 
 ```conf
 include rosepine.conf
@@ -23,8 +23,13 @@ include rosepine.conf
 
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)
 
+Rosé Pine
 ![Kitty with Rosé Pine](https://i.imgur.com/QbcSiNH.png)
+
+Rosé Pine Dawn
+![Kitty Rosé Pine Dawn](https://imgur.com/GN8jAKx.png)
 
 ## Thanks to 
 
 - [ThatOneCalculator](https://github.com/thatonecalculator)
+- [edunfelt](https://github.com/edunfelt)

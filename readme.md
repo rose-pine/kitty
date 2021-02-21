@@ -26,6 +26,9 @@ Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfet
 Rosé Pine
 ![Kitty with Rosé Pine](https://i.imgur.com/QbcSiNH.png)
 
+Rosé Pine Moon
+![Kitty Rosé Pine Moon](https://imgur.com/ZRyJ2ml.png)
+
 Rosé Pine Dawn
 ![Kitty Rosé Pine Dawn](https://imgur.com/GN8jAKx.png)
 

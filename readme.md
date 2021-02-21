@@ -13,10 +13,10 @@
 
 ## Usage
 
-1. Move the desired colorscheme, for example `rosepine.conf`, to `.config/kitty/`
+1. Move the desired colorscheme, for example `rose-pine.conf`, to `.config/kitty/`
 2. Edit `.config/kitty/kitty.conf` and add the line 
 ```conf
-include rosepine.conf
+include rose-pine.conf
 ```
 
 ## Gallery
@@ -27,10 +27,10 @@ Rosé Pine
 ![Kitty with Rosé Pine](https://i.imgur.com/QbcSiNH.png)
 
 Rosé Pine Moon
-![Kitty Rosé Pine Moon](https://imgur.com/ZRyJ2ml.png)
+![Kitty with Rosé Pine Moon](https://imgur.com/ZRyJ2ml.png)
 
 Rosé Pine Dawn
-![Kitty Rosé Pine Dawn](https://imgur.com/GN8jAKx.png)
+![Kitty with Rosé Pine Dawn](https://imgur.com/GN8jAKx.png)
 
 ## Thanks to 
 

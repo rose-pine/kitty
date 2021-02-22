@@ -24,13 +24,13 @@ include rose-pine.conf
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)
 
 Rosé Pine
-![Kitty with Rosé Pine](https://i.imgur.com/QbcSiNH.png)
+![Kitty with Rosé Pine](https://imgur.com/HDzxDrM.png)
 
 Rosé Pine Moon
-![Kitty with Rosé Pine Moon](https://imgur.com/ZRyJ2ml.png)
+![Kitty with Rosé Pine Moon](https://imgur.com/lmudsjR.png)
 
 Rosé Pine Dawn
-![Kitty with Rosé Pine Dawn](https://imgur.com/GN8jAKx.png)
+![Kitty with Rosé Pine Dawn](https://imgur.com/6Wy8nUr.png)
 
 ## Thanks to 
 

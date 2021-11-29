@@ -28,14 +28,24 @@ Check out our functions to [toggle theme from shell](#toggle-theme-from-shell).
 
 ### Using kitten
 
-```sh
-# Search themes for Rosé Pine
-kitty +kitten themes
+Search kitty themes for Rosé Pine
 
-# Or set theme directly (may quit kitty)
-kitty +kitten themes Rosé Pine
-                     Rosé Pine Dawn
-                     Rosé Pine Moon
+```sh
+kitty +kitten themes
+```
+
+Or set theme directly
+
+```sh
+kitty +kitten themes --reload-in=all Rosé Pine
+```
+
+```sh
+kitty +kitten themes --reload-in=all Rosé Pine Moon
+```
+
+```sh
+kitty +kitten themes --reload-in=all Rosé Pine Dawn
 ```
 
 ## Gallery
@@ -53,43 +63,67 @@ Rosé Pine Dawn
 
 ## Toggle theme from shell
 
-**fish**
+<details>
+	<summary>Fish using [kitty-themes](https://github.com/kovidgoyal/kitty-themes)</summary>
 
-```fish
-function theme
-    set current_theme (awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
-    set new_theme "rose-pine.conf"
+	> Optionally toggle via <kbd>⌘+l</kbd> `bind \e\[108\;9u toggle-theme` 
+  
+	```fish
+	function toggle-theme
+		if [ "$THEME" = "Rosé Pine" ]
+			set -U THEME "Rosé Pine Dawn"
+		else
+			set -U THEME "Rosé Pine"
+		end
 
-    if [ "$current_theme" = "rose-pine.conf" ]
-        set new_theme "rose-pine-dawn.conf"
-    end
+		kitty +kitten themes --reload-in=all $THEME
+	end
+	```
+</details>
 
-    # Set theme for active sessions. Requires `allow_remote_control yes`
-    kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+<details>
+	<summary>Fish with manual includes</summary>
 
-    # Update config for persistence
-    sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
-end
-```
+	> Optionally toggle via <kbd>⌘+l</kbd> `bind \e\[108\;9u toggle-theme` 
+  
+	```fish
+	function toggle-theme
+		set current_theme (awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+		set new_theme "rose-pine.conf"
 
-**zsh**
+		if [ "$current_theme" = "rose-pine.conf" ]
+			set new_theme "rose-pine-dawn.conf"
+		end
 
-```sh
-function theme() {
-	current_theme=$(awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
-	new_theme="rose-pine.conf"
+		# Set theme for active sessions. Requires `allow_remote_control yes`
+		kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
 
-	if [ "$current_theme" = "rose-pine.conf" ]; then
-		new_theme="rose-pine-dawn.conf"
-	fi
+		# Update config for persistence
+		sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+	end
+	```
+</details>
 
-	# Set theme for active sessions. Requires `allow_remote_control yes`
-	kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+<details>
+	<summary>ZSH with manual includes</summary>
 
-	# Update config for persistence
-	sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
-}
-```
+	```sh
+	function toggle-theme() {
+		current_theme=$(awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+		new_theme="rose-pine.conf"
+
+		if [ "$current_theme" = "rose-pine.conf" ]; then
+			new_theme="rose-pine-dawn.conf"
+		fi
+
+		# Set theme for active sessions. Requires `allow_remote_control yes`
+		kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+
+		# Update config for persistence
+		sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+	}
+	```
+</details>
 
 ## Thanks to 
 

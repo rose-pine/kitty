@@ -13,10 +13,29 @@
 
 ## Usage
 
-1. Move the desired colorscheme, for example `rose-pine.conf`, to `.config/kitty/`
-2. Edit `.config/kitty/kitty.conf` and add the line 
+### Manual
+
+- Move one or more `rose-pine{-dawn,-moon}.conf` to `~/.config/kitty/`
+- Include theme in `kitty.conf`
+
 ```conf
+# ~/.config/kitty/kitty.conf
+
 include rose-pine.conf
+```
+
+Check out our functions to [toggle theme from shell](#toggle-theme-from-shell).
+
+### Using kitten
+
+```sh
+# Search themes for Rosé Pine
+kitty +kitten themes
+
+# Or set theme directly (may quit kitty)
+kitty +kitten themes Rosé Pine
+                     Rosé Pine Dawn
+                     Rosé Pine Moon
 ```
 
 ## Gallery
@@ -31,6 +50,46 @@ Rosé Pine Moon
 
 Rosé Pine Dawn
 ![Kitty with Rosé Pine Dawn](https://imgur.com/6Wy8nUr.png)
+
+## Toggle theme from shell
+
+**fish**
+
+```fish
+function theme
+    set current_theme (awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+    set new_theme "rose-pine.conf"
+
+    if [ "$current_theme" = "rose-pine.conf" ]
+        set new_theme "rose-pine-dawn.conf"
+    end
+
+    # Set theme for active sessions. Requires `allow_remote_control yes`
+    kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+
+    # Update config for persistence
+    sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+end
+```
+
+**zsh**
+
+```sh
+function theme() {
+	current_theme=$(awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+	new_theme="rose-pine.conf"
+
+	if [ "$current_theme" = "rose-pine.conf" ]; then
+		new_theme="rose-pine-dawn.conf"
+	fi
+
+	# Set theme for active sessions. Requires `allow_remote_control yes`
+	kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+
+	# Update config for persistence
+	sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+}
+```
 
 ## Thanks to 
 

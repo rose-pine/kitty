@@ -13,10 +13,27 @@
 
 ## Usage
 
-1. Move the desired colorscheme, for example `rose-pine.conf`, to `.config/kitty/`
-2. Edit `.config/kitty/kitty.conf` and add the line 
+### Manual
+
+- Move one or more `rose-pine{-dawn,-moon}.conf` to `~/.config/kitty/`
+- Include theme in `kitty.conf`
+
 ```conf
+# ~/.config/kitty/kitty.conf
+
 include rose-pine.conf
+```
+
+### Using kitten
+
+```sh
+# Search themes for Rosé Pine
+kitty +kitten themes
+
+# Or set theme directly (may quit kitty)
+kitty +kitten themes Rosé Pine
+                     Rosé Pine Dawn
+                     Rosé Pine Moon
 ```
 
 ## Gallery

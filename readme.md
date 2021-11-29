@@ -52,77 +52,82 @@ kitty +kitten themes --reload-in=all Rosé Pine Dawn
 
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)
 
-Rosé Pine
+**Rosé Pine**
+
 ![Kitty with Rosé Pine](https://imgur.com/HDzxDrM.png)
 
-Rosé Pine Moon
+**Rosé Pine Moon**
+
 ![Kitty with Rosé Pine Moon](https://imgur.com/lmudsjR.png)
 
-Rosé Pine Dawn
+**Rosé Pine Dawn**
+
 ![Kitty with Rosé Pine Dawn](https://imgur.com/6Wy8nUr.png)
 
 ## Toggle theme from shell
 
 <details>
-	<summary>Fish using [kitty-themes](https://github.com/kovidgoyal/kitty-themes)</summary>
-
-	> Optionally toggle via <kbd>⌘+l</kbd> `bind \e\[108\;9u toggle-theme` 
+	<summary>Fish using <a href="https://github.com/kovidgoyal/kitty-themes">kitty-themes</a></summary>
   
-	```fish
-	function toggle-theme
-		if [ "$THEME" = "Rosé Pine" ]
-			set -U THEME "Rosé Pine Dawn"
-		else
-			set -U THEME "Rosé Pine"
-		end
-
-		kitty +kitten themes --reload-in=all $THEME
+```fish
+function toggle-theme
+	if [ "$THEME" = "Rosé Pine" ]
+		set -U THEME "Rosé Pine Dawn"
+	else
+		set -U THEME "Rosé Pine"
 	end
-	```
+
+	kitty +kitten themes --reload-in=all $THEME
+end
+
+# Optionally toggle via keybind
+bind \e\[108\;9u toggle-theme # <super+l>
+```
 </details>
 
 <details>
 	<summary>Fish with manual includes</summary>
-
-	> Optionally toggle via <kbd>⌘+l</kbd> `bind \e\[108\;9u toggle-theme` 
   
-	```fish
-	function toggle-theme
-		set current_theme (awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
-		set new_theme "rose-pine.conf"
+```fish
+function toggle-theme
+	set current_theme (awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+	set new_theme "rose-pine.conf"
 
-		if [ "$current_theme" = "rose-pine.conf" ]
-			set new_theme "rose-pine-dawn.conf"
-		end
-
-		# Set theme for active sessions. Requires `allow_remote_control yes`
-		kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
-
-		# Update config for persistence
-		sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+	if [ "$current_theme" = "rose-pine.conf" ]
+		set new_theme "rose-pine-dawn.conf"
 	end
-	```
+
+	# Set theme for active sessions. Requires `allow_remote_control yes`
+	kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+
+	# Update config for persistence
+	sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+end
+
+# Optionally toggle via keybind
+bind \e\[108\;9u toggle-theme # <super+l>
+```
 </details>
 
 <details>
 	<summary>ZSH with manual includes</summary>
 
-	```sh
-	function toggle-theme() {
-		current_theme=$(awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
-		new_theme="rose-pine.conf"
+```sh
+function toggle-theme() {
+	current_theme=$(awk '$1=="include" {print $2}' "$HOME/.config/kitty/kitty.conf")
+	new_theme="rose-pine.conf"
 
-		if [ "$current_theme" = "rose-pine.conf" ]; then
-			new_theme="rose-pine-dawn.conf"
-		fi
+	if [ "$current_theme" = "rose-pine.conf" ]; then
+		new_theme="rose-pine-dawn.conf"
+	fi
 
-		# Set theme for active sessions. Requires `allow_remote_control yes`
-		kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
+	# Set theme for active sessions. Requires `allow_remote_control yes`
+	kitty @ set-colors --all --configured "~/.config/kitty/$new_theme"
 
-		# Update config for persistence
-		sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
-	}
-	```
+	# Update config for persistence
+	sed -i '' -e "s/include.*/include $new_theme/" "$HOME/.config/kitty/kitty.conf"
+}
+```
 </details>
 
 ## Thanks to 

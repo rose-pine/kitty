@@ -69,7 +69,7 @@ Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfet
 ## Toggle theme from shell
 
 <details>
-	<summary>&or; Fish using <a href="https://github.com/kovidgoyal/kitty-themes">kitty-themes</a></summary>
+	<summary>Fish using <a href="https://github.com/kovidgoyal/kitty-themes">kitty-themes</a></summary>
   
 ```fish
 function toggle-theme
@@ -91,7 +91,7 @@ bind \e\[108\;9u toggle-theme # <super+l>
 </details>
 
 <details>
-	<summary>&or; Fish with manual includes</summary>
+	<summary>Fish with manual includes</summary>
 
 ```fish
 function toggle-theme
@@ -116,7 +116,7 @@ bind \e\[108\;9u toggle-theme # <super+l>
 </details>
 
 <details>
-	<summary>&or; ZSH with manual includes</summary>
+	<summary>ZSH with manual includes</summary>
 
 ```sh
 function toggle-theme() {

@@ -16,6 +16,12 @@
 ### Manual
 
 - Move one or more `rose-pine{-dawn,-moon}.conf` to `~/.config/kitty/`
+
+```sh
+mkdir -p ~/.config/kitty/themes/
+cp -r ./dist/ ~/.config/kitty/themes/
+```
+
 - Include theme in `kitty.conf`
 
 ```conf

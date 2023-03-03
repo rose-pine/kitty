@@ -34,7 +34,7 @@ Check out our functions to [toggle theme from shell](#toggle-theme-from-shell).
 
 ### Using kitten
 
-> This version can be found at [kovidgoyal/kitty-themes](https://github.com/kovidgoyal/kitty-themes)
+> Can be found at [kovidgoyal/kitty-themes](https://github.com/kovidgoyal/kitty-themes). Version may differ.
 
 Search kitty themes for Rosé Pine
 

@@ -56,6 +56,23 @@ kitty +kitten themes --reload-in=all Rosé Pine Moon
 kitty +kitten themes --reload-in=all Rosé Pine Dawn
 ```
 
+## Change app icon
+
+> Docs are at https://sw.kovidgoyal.net/kitty/faq/#i-do-not-like-the-kitty-icon
+
+Place an included icon from`/icons` in your config location.
+
+```sh
+cp -r ./icons/rose-pine-kitty-icon.png ~/.config/kitty/kitty.app.png
+
+# Or
+cp -r ./icons/rose-pine-terminal-icon.png ~/.config/kitty/kitty.app.png
+```
+
+|                                                                      rose-pine-kitty-icon.png                                                                       |                                                                                rose-pine-terminal-icon.png                                                                                |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img width="256" src="./icons/rose-pine-kitty-icon.png" alt="Kitty application icon featuring a winking cat atop a colourful big-sur style gradient background." /> | <img width="256" src="./icons/rose-pine-terminal-icon.png" alt="Kitty application icon featuring a playful, robot-like television atop a colourful big-sur style gradient background." /> |
+
 ## Gallery
 
 Fetch featured below is [NerdFetch](https://github.com/thatonecalculator/nerdfetch)

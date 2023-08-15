@@ -63,10 +63,10 @@ kitty +kitten themes --reload-in=all Rosé Pine Dawn
 Place an included icon from`/icons` in your config location.
 
 ```sh
-cp -r ./icons/rose-pine-kitty-icon.png ~/.config/kitty/kitty.app.png
+cp -r ./icons/kitty.app@2x.png ~/.config/kitty/kitty.app.png
 
 # Or
-cp -r ./icons/rose-pine-terminal-icon.png ~/.config/kitty/kitty.app.png
+cp -r ./icons/terminal.app@2x.png ~/.config/kitty/kitty.app.png
 ```
 
 |                                                                      rose-pine-kitty-icon.png                                                                       |                                                                                rose-pine-terminal-icon.png                                                                                |
